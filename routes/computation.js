@@ -9,10 +9,10 @@ router.get('/', function(req, res, next) {
   if (req.query.x !== undefined) {
     x = parseFloat(req.query.x);
   }
-  var res = Math.log(x);
-  var output = `Math.round(${x}) is ${res}`;
+  var result = Math.log2(x);
+  var out = `Math.log(${x}) is ${result}`;
   
-  res.render('computation', { title: output });
+  res.render('computation', {title: out});
 });
 
 module.exports = router;
