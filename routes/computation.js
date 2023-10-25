@@ -10,6 +10,7 @@ router.get('/', function(req, res, next) {
     x = parseFloat(req.query.x);
   }
   var result = Math.log2(x);
+
   var out = `Math.log2(${x}) is ${result}`;
   
   res.render('computation', {title: out});
